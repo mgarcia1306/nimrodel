@@ -34,7 +34,8 @@ h2 {
 }
 
 .card:hover {
-  background-color: #d00317e0;
+  background-color: #000000e0;
+  color:#ccc;
 }
 
 .img-tarjetas {
@@ -78,8 +79,10 @@ body {
 .img-modal {
   margin: auto;
   display: block;
-  width: 100%;
-  max-width: 800px;
+  /* width: 100%; */
+  /* max-width: 800px; */
+  width: 550px;
+  height: 400px;
 }
 
 #contenedor-texto,
@@ -141,17 +144,41 @@ body {
 }
 
 /*------------------------- MODAL LINK NOSOTROS -------------------------*/
-#img1 {
-  width: 400px;
-  height: 500px;
+.logo-modal {
+  width:50px;
+  /* margin:0; */
 }
 
-#carousel-modalnosotros .carousel-item img, .carousel-item p {
+#img1 {
+  width: 280px;
+}
+
+#img2 {
+  width: 410px;
+}
+
+#img1, #img2 {
+  border-radius: 10px;
+}
+
+.drop {
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)); 
+}
+
+#carousel-modalnosotros .carousel-item img, 
+.carousel-item p {
   max-width: 100%;
   height: auto;
   margin: auto;
 }
 
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  filter: invert(108%);
+}
+
+.btn-close {
+  filter: invert(108%);
+}
 
 /*------------------------- ASIDE/Carrusel -------------------------*/
 .img-carrusel {
