@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/estilo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    
+
     <title>Nimrodel Pub Restaurant</title>
 </head>
 <body>
@@ -19,13 +19,13 @@
                 <!------------------------- NAV UNO (Se muestra hasta los 768px, luego se oculta y se sustituye por Nav Dos) ---------->
                 <div class="container-fluid" id="navbarUno">
                     <a href="index.html" class="navbar-brand"><img src="assets/img/n.png" alt="Logo Pub Restaurant Nimrodel" class="logo-img d-inline-block align-middle mr-2"></a>
-                    <button type="button" data-bs-toggle="collapse" data-bs-taget="#navbarSupportedContent" data-bs-target="#navUno"
+                    <button type="button" data-bs-toggle="collapse" data-bs-target="#navUno"
                         aria-controls="navUno" aria-expanded="false" aria-label="Toggle navigation"
                         class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
                     <div id="navUno" class="collapse navbar-collapse navbar-bar">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item"><a class="nav-link" href="#">Nuestros productos</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Sobre nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link link-modal" data-bs-toggle="modal" data-bs-target="#modalnosotros" href="#">Sobre nosotros</a></li>
                             <li class="nav-item"><a class="contacto nav-link" href="#fcontacto">Comuniquémonos</a></li>
                             <li class="nav-item"><a class="reservas nav-link" href="#freservas">Reservas</a></li>
                         </ul>
@@ -40,7 +40,7 @@
                     <div id="navDos" class="collapse navbar-collapse navbar-bar">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item"><a class="nav-link" href="#">Nuestros productos</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Sobre nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link link-modal" data-bs-toggle="modal" data-bs-target="#modalnosotros" href="#">Sobre nosotros</a></li>
                             <li class="nav-item"><a class="contacto nav-link" href="#fcontacto" onclick="mostrarFormContacto()">Comuniquémonos</a></li>
                             <li class="nav-item"><a class="reservas nav-link" href="#freservas" onclick="mostrarFormReservas()">Reservas</a></li>
                         </ul>
@@ -96,7 +96,7 @@
         <section id="formularios">
             <!------------------------ FORMULARIO CONTACTO --------->
             <div id="fcontacto" class="formcontacto container text-center mt-5 pb-5">           
-                <form id="formcontacto" action="" method="post">                
+                <form id="formcontacto">                
                     <div class="row justify-content-center mt-3">
                         <div class="col-md-6 text-light bg-secondary pt-3">
                             <h5 id="contacto">COMUNIQUÉMONOS</h5>
@@ -147,7 +147,8 @@
             </div>
             <!------------------------ FORMULARIO RESERVAS --------->
             <div id="freservas" class="formreservas container text-center mt-2">          
-                <form id="formreservas" action="" method="post">
+                <!-- <form id="formreservas" action="" method="post"> -->
+                    <form id="formreservas">
                     <div class="row justify-content-center mt-3">
                         <div class="col-md-6 text-light bg-secondary pt-3">
                             <h5 id="reservas">RESERVAS</h5>
@@ -236,22 +237,63 @@
         </div>
     </div>   
     </footer>
-    <!------------------------ MODAL --------->
+    <!------------------------ MODAL TARJETAS --------->
     <div id="ventana-modal" class="modal">
         <span class="cerrar">&times;</span>
         <h5 id="titulo-modal"></h5>
         <img class="img-modal" id="imagen-modal">
         <div id="contenedor-texto"></div>
     </div>
+    <!------------------------ MODAL LINK --------->
+    <div class="modal fade" id="modalnosotros" tabindex="-1" aria-labelledby="modalnosotros" style="display: none;" aria-modal="true" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header bg-dark">
+                <img src="assets/img/n.png" alt="Logo Pub Restaurant Nimrodel" class="logo-img d-inline-block align-end"><h1 class="modal-title fs-6 ms-auto text-secondary" id="titulo-modalnosotros">Nimrodel Pub Restaurant</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="carousel-modalnosotros" class="carousel slide pointer-event">
+              <div class="carousel-inner">
+                <div class="carousel-item active mb-5">
+                  <div class="modal-body">
+                    <p class="fst-italic col-lg-9">Nimrodel Significa “dama de la cueva blanca”. Fue una elfa silvana que vivió durante la Tercera Edad del Sol en el bosque de Lothlórien. En honor a su nombre, se acuña Nimrodel al río que nace en las Montañas Nubladas.</p> 
+                    <img src="assets/img/IMG2.jpg" class="mx-auto col-lg-9 d-block w-20 mt-3" alt="Nimrodel">
+                  </div>
+                </div>
+                <div class="carousel-item mb-5">
+                  <div class="modal-body col-lg-9 mx-auto">
+                    <p class="fst-italic text-break">Nimrodel Pub Restaurant es un oasis de calma y diversión, lleno de rincones acogedores en donde se resalta la belleza de su decoración élfica. Es un lugar ideal para visitar solo o acompañado, disfrutar una tarde con amigos, terminar
+                    el día después del trabajo o almorzar con tu familia. Puedes probar nuestras tradicionales tablas, en todas sus variedades y que nos han otorgado reconocimiento dentro de la cultura gastronómica. También puedes disfrutar nuestras cervezas de fabricación propia, con sabores que te
+                    llevarán a un mágico mundo.</p>
+                  </div>
+                </div>
+                <div class="carousel-item mb-5">
+                  <img id="img1" src="assets/img/IMG1.jpg" class="d-block mx-auto w-5 mt-3" alt="Nimrodel">
+                </div>
+              </div>
+              <button class="carousel-control-prev" id="btprv" type="button" data-bs-target="#carousel-modalnosotros" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" id="btnxt" type="button" data-bs-target="#carousel-modalnosotros" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     <!------------------------- BOTÓN IR ARRIBA ---------->
     <button type="button" class="btn btn-background btn-floating btn-lg" id="btn-back-to-top">
         <i class="fa-solid fa-arrow-up" style="color: #ffffff;"></i>
     </button>
     <!------------------------ SCRIPTS --------->
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> -->
     <script src="assets/js/script.js"></script>
     <script src="assets/js/jquery.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+   
 </body>
 </html>

@@ -44,6 +44,3 @@ $(document).ready(function() {
     ventana_modal.css("display", "none");
   });
 });
-
-
-
