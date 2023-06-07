@@ -1,0 +1,175 @@
+/*------------------------- HEADER -------------------------*/
+.logo-img {
+  width: 100px;
+}
+
+nav {
+  background: url(../img/fondo.jpg) repeat-x;
+  background-size: contain;
+  background-color: black;
+  color: gray;
+}
+
+.navbar-bar {
+  justify-content: center;
+}
+
+#navbarDos {
+  display: none;
+}
+
+/*------------------------- BACK TO TOP -------------------------*/
+#btn-back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  display: none;
+  z-index: 99;
+  background-color: #D00316;
+}
+
+/*------------------------- MAIN -------------------------*/
+h2 {
+  text-decoration: overline;
+}
+
+.card:hover {
+  background-color: #d00317e0;
+}
+
+.img-tarjetas {
+  width: 100%;
+  height: 185px;
+}
+
+/*------------------------- MODAL -------------------------*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#imagen-uno,
+#imagen-dos,
+#imagen-tres {
+  border-radius: 0px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#imagen-uno:hover,
+#imagen-dos:hover,
+#imagen-tres:hover {
+  opacity: 0.8;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 70px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.img-modal {
+  margin: auto;
+  display: block;
+  width: 100%;
+  max-width: 800px;
+}
+
+#contenedor-texto,
+#titulo-modal {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 50px;
+}
+
+#titulo-modal,
+.img-modal,
+#contenedor-texto {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.3s;
+  animation-name: zoom;
+  animation-duration: 0.3s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0)
+  }
+
+  to {
+    -webkit-transform: scale(1)
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+.cerrar {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*------------------------- ASIDE -------------------------*/
+.img-carrusel {
+  width: 100%;
+  height: 550px;
+}
+
+/*------------------------- FOOTER -------------------------*/
+.footer {
+  background-image: url(../img/fondo.jpg);
+  background-size: cover;
+  background-repeat: repeat-x;
+  height: 170px;
+}
+
+/*------------------------- MEDIA QUERIES -------------------------*/
+@media only screen and (max-width: 768px) {
+  #navbarUno {
+    display: none;
+  }
+
+  #navbarDos {
+    display: flex;
+  }
+
+  .imagen-modal {
+    width: 100%;
+  }
+
+  #formcontacto,
+  #formreservas {
+    display: none;
+  }
+}

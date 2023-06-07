@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/n.png">
+    <link rel="stylesheet" href="assets/css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    
+    <title>Nimrodel Pub Restaurant</title>
+</head>
+<body>
+    <!------------------------- MENU NAVEGACION / Nav Uno / Nav Dos ---------->
+    <header>
+        <div class="wrap">
+            <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+                <!------------------------- NAV UNO (Se muestra hasta los 768px, luego se oculta y se sustituye por Nav Dos) ---------->
+                <div class="container-fluid" id="navbarUno">
+                    <a href="index.html" class="navbar-brand"><img src="assets/img/n.png" alt="Logo Pub Restaurant Nimrodel" class="logo-img d-inline-block align-middle mr-2"></a>
+                    <button type="button" data-bs-toggle="collapse" data-bs-taget="#navbarSupportedContent" data-bs-target="#navUno"
+                        aria-controls="navUno" aria-expanded="false" aria-label="Toggle navigation"
+                        class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+                    <div id="navUno" class="collapse navbar-collapse navbar-bar">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" href="#">Nuestros productos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Sobre nosotros</a></li>
+                            <li class="nav-item"><a class="contacto nav-link" href="#fcontacto">Comuniquémonos</a></li>
+                            <li class="nav-item"><a class="reservas nav-link" href="#freservas">Reservas</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!------------------------- NAV DOS (Se mantiene oculta hasta los 769px) ---------->
+                <div class="container-fluid" id="navbarDos">
+                    <a href="index.html" class="navbar-brand"><img src="assets/img/n.png" alt="Logo Pub Restaurant Nimrodel" class="logo-img d-inline-block align-middle mr-2"></a>
+                    <button type="button" data-bs-toggle="collapse" data-bs-target="#navDos"
+                        aria-controls="navDos" aria-expanded="false" aria-label="Toggle navigation"
+                        class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+                    <div id="navDos" class="collapse navbar-collapse navbar-bar">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" href="#">Nuestros productos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Sobre nosotros</a></li>
+                            <li class="nav-item"><a class="contacto nav-link" href="#fcontacto" onclick="mostrarFormContacto()">Comuniquémonos</a></li>
+                            <li class="nav-item"><a class="reservas nav-link" href="#freservas" onclick="mostrarFormReservas()">Reservas</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!------------------------ TÍTULO / CONTENIDO CENTRAL / FORMULARIOS --------->
+    <main>
+        <!------------------------- TITULO ---------->
+        <section id="titulo">
+            <h1 class="text-body-tertiary text-center mt-3 mb-5">Nimrodel Pub Restaurant</h1>
+        </section>
+        <!------------------------- CONTENIDO CENTRAL / Tarjetas ---------->
+        <section id="destacados">
+            <h2 class="text-center mt-5"><strong><i>Destacados de la semana</i></strong></h2>
+            <!------------------------- TARJETAS ---------->
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-12 col-lg-4 mb-3">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <img id="imagen-uno" src="assets/img/bebidas.jpg" class="img-tarjetas card-img-top" alt="Bebidas"><br>
+                                <h5 id="titulo-uno" class="card-title titulo-card">Bebidas</h5>
+                                <p id="texto-uno" class="card-text text-center contenido-texto">Lorem ipsum uno dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-4 mb-3">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <img id="imagen-dos" src="assets/img/tablas.jpg" class="img-tarjetas" alt="Tablas" class="card-img-top"><br>
+                                <h5 id="titulo-dos" class="card-title titulo-card">Tablas</h5>
+                                <p id="texto-dos" class="card-text text-center contenido-texto">Lorem ipsum dos dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-4 mb-0">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <img id="imagen-tres" src="assets/img/shop.jpeg" class="img-tarjetas" alt="Cervezas" class="card-img-top"><br>
+                                <h5 id="titulo-tres" class="card-title titulo-card">Cervezas</h5>
+                                <p id="texto-tres" class="card-text text-center contenido-texto">Lorem ipsum tres dolor sit amet consectetur adipisicing elit. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!------------------------ FORMULARIOS / Contacto / Reservas --------->
+        <section id="formularios">
+            <!------------------------ FORMULARIO CONTACTO --------->
+            <div id="fcontacto" class="formcontacto container text-center mt-5 pb-5">           
+                <form id="formcontacto" action="" method="post">                
+                    <div class="row justify-content-center mt-3">
+                        <div class="col-md-6 text-light bg-secondary pt-3">
+                            <h5 id="contacto">COMUNIQUÉMONOS</h5>
+                            <div class="row mb-3 mt-3 justify-content-center">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" id="name_c" placeholder="Su nombre" pattern="^[a-z A-Z+a-z A-Z]{2,50}$">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <div class="col-md-12">
+                                    <input type="email" class="form-control" id="email_c" placeholder="Su email"
+                                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="tel" class="form-label">Teléfono</label>
+                                <div class="col-md-12">
+                                    <input type="tel" class="form-control" id="tel_c" placeholder="Su teléfono" pattern="[0-9]{9}$" maxlength="9">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="motivo" class="form-label">Motivo</label>
+                                <div class="col-md-12">
+                                    <select name="motivo" id="motivo" class="form-select">
+                                        <option value="">Elija el motivo: </option>
+                                        <option value="Consulta">Consulta</option>
+                                        <option value="Felicitación">Felicitaciones</option>
+                                        <option value="Reclamo">Reclamos</option>
+                                        <option value="Sugerencia">Sugerencias</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="form-group">
+                                    <textarea class="form-control" value="text" name="comentario" id="comentario" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center mb-3">
+                                <div class="col-md-6">
+                                    <button type="submit" class="btn btn-primary">Enviar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!------------------------ FORMULARIO RESERVAS --------->
+            <div id="freservas" class="formreservas container text-center mt-2">          
+                <form id="formreservas" action="" method="post">
+                    <div class="row justify-content-center mt-3">
+                        <div class="col-md-6 text-light bg-secondary pt-3">
+                            <h5 id="reservas">RESERVAS</h5>
+                            <div class="row mb-3 mt-3 justify-content-center">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" id="name_r" placeholder="Su nombre" pattern="^[a-z A-Z+a-z A-Z]{2,50}$">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <div class="col-md-12">
+                                    <input type="email" class="form-control" id="email_r" placeholder="Su email"
+                                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="tel" class="form-label">Teléfono</label>
+                                <div class="col-md-12">
+                                    <input type="tel" class="form-control" id="tel_r" placeholder="Su teléfono" pattern="[0-9]{9}$" maxlength="9">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="hora" class="form-label">Escoja la hora&nbsp;&nbsp;</label>
+                                <div class="col-md-12">
+                                    <input type="time" class="form-control" name="hora" id="hora" min="12:00" max="00:00">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="fecha" class="form-label">Escoja la fecha&nbsp;&nbsp;</label>
+                                <div class="col-md-12">
+                                    <input class="form-control" type="date" name="fecha" id="fecha" max="2023-09-01">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="asistentes" class="form-label">Cantidad de asistentes&nbsp;&nbsp;</label>
+                                <div class="col-md-12">
+                                    <input class="form-control" type="number" name="asistentes" id="asistentes"
+                                        placeholder="150 max." pattern="[1-150]{1,150}$" min="1" max="150" >
+                                </div>
+                            </div>
+                            <div class="row justify-content-center mb-3">
+                                <div class="col-md-6">
+                                    <button type="submit" class="btn btn-primary">Enviar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!------------------------ CARRUSEL --------->
+    <aside id="carrusel">
+        <div id="carouselExample" class="carousel slide mt-5">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/chorillana.jpg" class="img-carrusel d-block" alt="Chorrillana">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/mojito.jpg" class="img-carrusel d-block" alt="Mojito">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/vino.jpg" class="img-carrusel d-block" alt="Vino">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </aside>
+    <!------------------------ FOOTER --------->
+    <footer>  
+        <div class="footer bg-dark text-light" title="Imagen de fondo: vaso con trago">
+            <div class="container pt-5">
+            <div class="row pt-3">
+                <div class="col-md-12 justify-content-center text-center d-flex">
+                <h5 class="justify-content-center">Todos los derechos reservados <i class="fa-regular fa-registered"></i></h5>
+            </div>
+        </div>
+        </div>
+    </div>   
+    </footer>
+    <!------------------------ MODAL --------->
+    <div id="ventana-modal" class="modal">
+        <span class="cerrar">&times;</span>
+        <h5 id="titulo-modal"></h5>
+        <img class="img-modal" id="imagen-modal">
+        <div id="contenedor-texto"></div>
+    </div>
+    <!------------------------- BOTÓN IR ARRIBA ---------->
+    <button type="button" class="btn btn-background btn-floating btn-lg" id="btn-back-to-top">
+        <i class="fa-solid fa-arrow-up" style="color: #ffffff;"></i>
+    </button>
+    <!------------------------ SCRIPTS --------->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>
